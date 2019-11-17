@@ -1,0 +1,6 @@
+git+https://github.com/Rapptz/discord.py
+git+https://github.com/UB-Mannheim/tesseract/wiki
+pytesseract
+requests
+Image
+async-timeout==3.0.1

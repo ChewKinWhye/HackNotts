@@ -1,7 +1,4 @@
 from discord.ext.commands import Bot
-import random
-import discord
-import calcMinPrice
 
 BOT_PREFIX = ("!")
 TOKEN = "NjQ1NDIzMTg2ODMzMzA5NzEz.XdCYhg.cqsC3fSwJ_06m_vEYisNnIk-tAA"

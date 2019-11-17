@@ -1,7 +1,5 @@
 from discord.ext.commands import Bot
-import random
-import discord
-import calcMinPrice
+from Unimpt import calcMinPrice
 
 BOT_PREFIX = ("-")
 TOKEN = "NjQ1MzI1NTM0Mzg0ODgxNjk0.XdA_sQ.yhG-em45ojN6kX6XURvVyz1ycno"

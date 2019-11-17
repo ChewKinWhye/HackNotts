@@ -30,7 +30,7 @@ def obtain_item_list(url):
     return item_name, item_price
 
 
-def calc_min_price(item_name):
+def calc_min_price(item_name, item_price):
     APIKey = "IDXACACQMBQNFRSYZJXACXJRMFWLXCIWCEPALTTNFDWUGHNLXETWSXNAAOOUAZER"
     data = {
         'token': APIKey,
@@ -65,7 +65,7 @@ def calc_min_price(item_name):
     urls = []
     try:
         for row in output['results'][0]['content']['search_results']:
-            if row['min_price'] is not None:
+            if row['min_price'] is not None and float(row['min_price']) < float(item_price):
                 prices.append(float(row['min_price']))
                 urls.append(row['url'])
                 counter = counter + 1
@@ -87,7 +87,7 @@ def main(url):
     item_comparison_list = []
     print(item_name_list)
     for i in range(0, len(item_name_list)):
-        options = calc_min_price(item_name_list[i])
+        options = calc_min_price(item_name_list[i], item_price_list[i])
         item_comparison_list.append(options)
     return item_name_list, item_price_list, item_comparison_list
 
